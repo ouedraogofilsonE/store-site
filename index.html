@@ -175,7 +175,9 @@
     </footer>
 
     <script>
-        const BASE_URL = 'http://localhost:5000/api';
+       const BASE_URL = window.location.hostname === 'localhost' 
+       ? 'http://localhost:5000/api' 
+       : 'https://TON-SERVEUR-BACKEND.onrender.com/api';
         let currentUser = null;
         let currentProducts = []; 
         let cart = []; // Stockage local du panier
